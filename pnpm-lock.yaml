@@ -9,6 +9,7 @@ specifiers:
   eslint-plugin-node: '>=11.1.0'
   eslint-plugin-promise: '>=4.2.1'
   execa: ^5.1.1
+  never: ^1.0.3
   release-it: ^14.10.0
   tslib: ^2.3.0
   typescript: ^4.3.4
@@ -16,6 +17,7 @@ specifiers:
 dependencies:
   '@actions/core': 1.4.0
   execa: 5.1.1
+  never: 1.0.3
   release-it: 14.10.0
   tslib: 2.3.0
 
@@ -1914,6 +1916,11 @@ packages:
   /natural-compare/1.4.0:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
     dev: true
+
+  /never/1.0.3:
+    resolution: {integrity: sha512-nJne5st+rCDsEqqJ5K9dnGmYCjYuoiIxWBAQb5OVujDJ8Wr1GuEIffLON7QqBQMhmBsK0hQg5JE+Zwq+gEJfzw==}
+    engines: {node: '>=10.18.0 <11 || >=12.14.0 <13 || >=13.5.0'}
+    dev: false
 
   /node-fetch/2.6.1:
     resolution: {integrity: sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==}

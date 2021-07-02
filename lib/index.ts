@@ -2,12 +2,13 @@ import { getInput, startGroup, endGroup } from '@actions/core'
 import execa from 'execa'
 import { join } from 'path'
 import { writeFile } from 'fs/promises'
+import never from 'never'
 
 const incrementsByScope =
   Object.entries<string>(JSON.parse(getInput('increments_by_scope', { required: true })))
 const newPackages: string[] = JSON.parse(getInput('new_packages', { required: true }))
 
-const getCwd = (packageName: string): string => join(__dirname, '../../packages', packageName)
+const getCwd = (packageName: string): string => join(process.env.GITHUB_WORKSPACE ?? never('no GITHUB_WORKSPACE'), 'packages', packageName)
 const gitChangelog = '--git.changelog="npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs"'
 // eslint-disable-next-line no-template-curly-in-string
 const npmrc = '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'
