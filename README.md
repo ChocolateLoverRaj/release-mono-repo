@@ -1,3 +1,6 @@
+> [!WARNING]  
+> I no longer use or maintain this project. I don't really code in JavaScript anymore (I switched to Rust). If you want to maintain or fork it let me know (you can email me) and I can put the link here.
+
 # release-mono-repo
 A GitHub Action to release multiple packages.
 
